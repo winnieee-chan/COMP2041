@@ -1,0 +1,19 @@
+#!/usr/bin/env dash
+
+# ==============================================================================
+# my-print
+# Echoes the first command-line argument.
+#
+# Written by: Winnie Chan <chi.chan1@student.unsw.edu.au>
+# Date: 2025-03-19
+# For COMP2041/9044 tute05
+# ==============================================================================
+
+
+if [ "$#" -eq 0 ]; then
+  echo "Usage: $0 <argument>" >&2
+  exit 1
+fi
+
+echo "$1"
+exit 0
