@@ -1,19 +1,17 @@
 #!/usr/bin/python3
 import sys
 
-n = 5
+n = 10
 
-if len(sys.argv) == 2: 
-    n = int(sys.argv[1]) * -1
+if len(sys.argv) == 2:
+    n = abs(int(sys.argv[1]))
 
+# print(n)
 lines = []
-for line in sys.stdin: # Reads from stdin
-    lines.append(line.strip('\n'))
+for line in sys.stdin:
+    lines.append(line)
 
-# Option 1
-# for i in range(0, n):
-#     print(lines[i])
 
-# Option 2
-print("\n".join(lines[0:n]))
-
+print(lines[:n])
+for line in lines[:n]:
+    print(line, end="")
