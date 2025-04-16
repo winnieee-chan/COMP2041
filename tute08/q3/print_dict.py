@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-def print_dict():
-    d = {
-        "key":"value",
-        "andrew": "green",
-        "anne": "red",
-        "John": "blue"
-    }
 
-    for key in d:
-        print(f"[{key}] => {d[key]}")
+dict = {"key": "value", "andrew": "green", "anne": "red", "John": "blue"}
 
-print_dict()
+print(dict.items())
+
+for k, val in dict.items():
+    print(f"[{k}] => {val}")
