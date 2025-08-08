@@ -10,6 +10,7 @@ url = sys.argv[1]
 process = subprocess.run(["wget", "-q", "-O-", url], capture_output=True, text=True)
 html = process.stdout.lower()
 
+
 # Remove comments
 html = re.sub("<!--.*", "", html)
 
@@ -17,5 +18,8 @@ html = re.sub("<!--.*", "", html)
 tags = re.findall(r"<\s*(\w+)", html)
 counter = collections.Counter(tags)
 
-for tag, count in counter.items():
+items = counter.items()
+items = sorted(items, key=lambda x: x[1])
+
+for tag, count in items:
     print(f"{tag}: {count}")

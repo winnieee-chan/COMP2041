@@ -1,5 +1,7 @@
 #!/bin/dash
 
+# Adds the current directory (.) to the front of the search path.
+# This makes it possible to run ./is_prime.sh just by typing is_prime.sh, without needing ./.
 PATH=".:$PATH"
 
 i=$1
